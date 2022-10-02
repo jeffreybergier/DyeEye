@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		73CC920528E91B8400F6A390 /* DyeEyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC920428E91B8400F6A390 /* DyeEyeApp.swift */; };
 		73CC920928E91B8600F6A390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CC920828E91B8600F6A390 /* Assets.xcassets */; };
-		73CC920C28E91B8600F6A390 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CC920B28E91B8600F6A390 /* Preview Assets.xcassets */; };
 		73CC921A28E91D7E00F6A390 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CC921928E91D7E00F6A390 /* WidgetKit.framework */; };
 		73CC921C28E91D7E00F6A390 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CC921B28E91D7E00F6A390 /* SwiftUI.framework */; };
 		73CC921F28E91D7E00F6A390 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC921E28E91D7E00F6A390 /* Bundle.swift */; };
@@ -18,7 +17,8 @@
 		73CC922828E91D8000F6A390 /* DyeEyeWyg.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 73CC922428E91D7F00F6A390 /* DyeEyeWyg.intentdefinition */; };
 		73CC922928E91D8000F6A390 /* DyeEyeWyg.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 73CC922428E91D7F00F6A390 /* DyeEyeWyg.intentdefinition */; };
 		73CC922C28E91D8000F6A390 /* DyeEyeWygExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 73CC921728E91D7E00F6A390 /* DyeEyeWygExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		73CC923128E9258900F6A390 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC922028E91D7E00F6A390 /* Activity.swift */; };
+		73CC923428E929AB00F6A390 /* WygShared in Frameworks */ = {isa = PBXBuildFile; productRef = 73CC923328E929AB00F6A390 /* WygShared */; };
+		73CC923628E929B000F6A390 /* WygShared in Frameworks */ = {isa = PBXBuildFile; productRef = 73CC923528E929B000F6A390 /* WygShared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		73CC920128E91B8400F6A390 /* DyeEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DyeEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CC920428E91B8400F6A390 /* DyeEyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyeEyeApp.swift; sourceTree = "<group>"; };
 		73CC920828E91B8600F6A390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		73CC920B28E91B8600F6A390 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		73CC921228E91D0C00F6A390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		73CC921728E91D7E00F6A390 /* DyeEyeWygExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DyeEyeWygExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CC921928E91D7E00F6A390 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -59,6 +58,7 @@
 		73CC922428E91D7F00F6A390 /* DyeEyeWyg.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DyeEyeWyg.intentdefinition; sourceTree = "<group>"; };
 		73CC922528E91D8000F6A390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73CC922728E91D8000F6A390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73CC923228E928D600F6A390 /* WygShared */ = {isa = PBXFileReference; lastKnownFileType = text; path = WygShared; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CC923428E929AB00F6A390 /* WygShared in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +76,7 @@
 			files = (
 				73CC921C28E91D7E00F6A390 /* SwiftUI.framework in Frameworks */,
 				73CC921A28E91D7E00F6A390 /* WidgetKit.framework in Frameworks */,
+				73CC923628E929B000F6A390 /* WygShared in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,7 @@
 			children = (
 				73CC920328E91B8400F6A390 /* DyeEye */,
 				73CC921D28E91D7E00F6A390 /* DyeEyeWyg */,
+				73CC923228E928D600F6A390 /* WygShared */,
 				73CC921828E91D7E00F6A390 /* Frameworks */,
 				73CC920228E91B8400F6A390 /* Products */,
 			);
@@ -106,17 +109,8 @@
 				73CC921228E91D0C00F6A390 /* Info.plist */,
 				73CC920428E91B8400F6A390 /* DyeEyeApp.swift */,
 				73CC920828E91B8600F6A390 /* Assets.xcassets */,
-				73CC920A28E91B8600F6A390 /* Preview Content */,
 			);
 			path = DyeEye;
-			sourceTree = "<group>";
-		};
-		73CC920A28E91B8600F6A390 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				73CC920B28E91B8600F6A390 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		73CC921828E91D7E00F6A390 /* Frameworks */ = {
@@ -158,6 +152,9 @@
 				73CC922B28E91D8000F6A390 /* PBXTargetDependency */,
 			);
 			name = DyeEye;
+			packageProductDependencies = (
+				73CC923328E929AB00F6A390 /* WygShared */,
+			);
 			productName = DyeEye;
 			productReference = 73CC920128E91B8400F6A390 /* DyeEye.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +172,9 @@
 			dependencies = (
 			);
 			name = DyeEyeWygExtension;
+			packageProductDependencies = (
+				73CC923528E929B000F6A390 /* WygShared */,
+			);
 			productName = DyeEyeWygExtension;
 			productReference = 73CC921728E91D7E00F6A390 /* DyeEyeWygExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -221,7 +221,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73CC920C28E91B8600F6A390 /* Preview Assets.xcassets in Resources */,
 				73CC920928E91B8600F6A390 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +242,6 @@
 			files = (
 				73CC922928E91D8000F6A390 /* DyeEyeWyg.intentdefinition in Sources */,
 				73CC920528E91B8400F6A390 /* DyeEyeApp.swift in Sources */,
-				73CC923128E9258900F6A390 /* Activity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DyeEye/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = V6ESYGU6CV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -422,7 +420,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DyeEye/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = V6ESYGU6CV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -531,6 +529,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		73CC923328E929AB00F6A390 /* WygShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WygShared;
+		};
+		73CC923528E929B000F6A390 /* WygShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WygShared;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 73CC91F928E91B8400F6A390 /* Project object */;
 }

@@ -9,8 +9,8 @@ import WidgetKit
 import SwiftUI
 
 @main
-struct DyeEyeWygBundle: WidgetBundle {
-    var body: some Widget {
+internal struct DyeEyeWygBundle: WidgetBundle {
+    internal var body: some Widget {
         Activity()
     }
 }

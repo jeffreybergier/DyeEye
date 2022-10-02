@@ -6,29 +6,26 @@
 //
 
 import SwiftUI
-import WidgetKit
 import ActivityKit
+import WygShared
 
 @main
-struct DyeEyeApp: App {
+internal struct DyeEyeApp: App {
     
-    // @State var activity: Activity<Attributes>?
+    @State internal var activity: Activity<Attributes>?
     
-    var body: some Scene {
+    internal var body: some Scene {
         WindowGroup {
-            EmptyView()
-//                .onAppear() {
-//                    var future = Calendar.current.date(byAdding: .minute, value: (Int(0) ?? 0), to: Date())!
-//                    future = Calendar.current.date(byAdding: .second, value: (Int(0) ?? 0), to: future)!
-//                    let initialContentState = DyeEyeWygAttributes.ContentState(value: 5)
-//                    let activityAttributes = DyeEyeWygAttributes(name: "Goodbye World")
-//
-//                    do {
-//                        self.activity = try Activity.request(attributes: activityAttributes, contentState: initialContentState)
-//                    } catch (let error) {
-//                        print("Error requesting pizza delivery Live Activity \(error.localizedDescription).")
-//                    }
-//                }
+            Text("Hello World")
+                .onAppear() {
+                    let initialContentState = Attributes.ContentState(value: 5)
+                    let activityAttributes = Attributes(name: "Goodbye World")
+                    do {
+                        self.activity = try Activity.request(attributes: activityAttributes, contentState: initialContentState)
+                    } catch (let error) {
+                        print("Error requesting pizza delivery Live Activity \(error.localizedDescription).")
+                    }
+                }
         }
     }
 }
