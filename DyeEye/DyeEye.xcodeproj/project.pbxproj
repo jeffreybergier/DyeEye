@@ -59,6 +59,7 @@
 		73CC922528E91D8000F6A390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73CC922728E91D8000F6A390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73CC923228E928D600F6A390 /* WygShared */ = {isa = PBXFileReference; lastKnownFileType = text; path = WygShared; sourceTree = SOURCE_ROOT; };
+		73CC923728E93D5600F6A390 /* DyeEye.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DyeEye.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 		73CC920328E91B8400F6A390 /* DyeEye */ = {
 			isa = PBXGroup;
 			children = (
+				73CC923728E93D5600F6A390 /* DyeEye.entitlements */,
 				73CC921228E91D0C00F6A390 /* Info.plist */,
 				73CC920428E91B8400F6A390 /* DyeEyeApp.swift */,
 				73CC920828E91B8600F6A390 /* Assets.xcassets */,
@@ -386,6 +388,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DyeEye/DyeEye.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -418,6 +421,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DyeEye/DyeEye.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";

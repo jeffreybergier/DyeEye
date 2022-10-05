@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "f504716c27d2e5d4144fa4794b12129301d17729",
+        "version" : "1.0.3"
+      }
+    },
+    {
+      "identity" : "umbrella",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeffreybergier/Umbrella.git",
+      "state" : {
+        "branch" : "v3",
+        "revision" : "9b53e1fcdb5ee93389437a22c583467c266dbcd6"
+      }
+    }
+  ],
+  "version" : 2
+}
