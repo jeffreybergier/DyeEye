@@ -24,12 +24,13 @@
 //  SOFTWARE.
 //
 
-import WidgetKit
 import SwiftUI
+import WidgetKit
+import WygShared
 
 @main
 internal struct DyeEyeWygBundle: WidgetBundle {
     internal var body: some Widget {
-        Activity()
+        EyeView()
     }
 }

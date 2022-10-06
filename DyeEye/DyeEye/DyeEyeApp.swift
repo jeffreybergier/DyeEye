@@ -31,7 +31,7 @@ import WygShared
 @main
 internal struct DyeEyeApp: App {
     
-    @State internal var activity: Activity<Attributes>?
+    @EyeActivity private var activity
     
     internal var body: some Scene {
         WindowGroup {
@@ -39,15 +39,6 @@ internal struct DyeEyeApp: App {
                 AppView()
                 AppView()
                 Spacer()
-            }
-            .onAppear() {
-                let initialContentState = Attributes.ContentState(value: 5)
-                let activityAttributes = Attributes(name: "Goodbye World")
-                do {
-                    self.activity = try Activity.request(attributes: activityAttributes, contentState: initialContentState)
-                } catch (let error) {
-                    print("Error requesting pizza delivery Live Activity \(error.localizedDescription).")
-                }
             }
         }
     }

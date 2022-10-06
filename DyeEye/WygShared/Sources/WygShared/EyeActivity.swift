@@ -1,5 +1,5 @@
 //
-//  Created by Jeffrey Bergier on 2022/10/05.
+//  Created by Jeffrey Bergier on 2022/10/06.
 //
 //  MIT License
 //
@@ -24,21 +24,31 @@
 //  SOFTWARE.
 //
 
+import SwiftUI
 import ActivityKit
-import WidgetKit
 
-public struct Attributes: ActivityAttributes {
-    public var name: String
-    public init(name: String) {
-        self.name = name
+@propertyWrapper
+public struct EyeActivity: DynamicProperty {
+    
+    @State private var activity: Activity<EyeAttributes>?
+    @State private var error: Error?
+    
+    public init() {
+        do {
+            _activity = .init(wrappedValue: try Activity.request(attributes: .init(), contentState: .init()))
+            _error = .init(wrappedValue: nil)
+        } catch {
+            _activity = .init(wrappedValue: nil)
+            _error = .init(wrappedValue: error)
+        }
+    }
+    
+    public var wrappedValue: Error? {
+        self.error
     }
 }
 
-extension Attributes {
-    public struct ContentState: Codable, Hashable {
-        public var value: Int
-        public init(value: Int) {
-            self.value = value
-        }
+internal struct EyeAttributes: ActivityAttributes {
+    internal struct ContentState: Codable, Hashable {
     }
 }

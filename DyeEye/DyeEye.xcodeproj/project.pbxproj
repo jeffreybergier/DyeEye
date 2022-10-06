@@ -12,7 +12,6 @@
 		73CC921A28E91D7E00F6A390 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CC921928E91D7E00F6A390 /* WidgetKit.framework */; };
 		73CC921C28E91D7E00F6A390 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CC921B28E91D7E00F6A390 /* SwiftUI.framework */; };
 		73CC921F28E91D7E00F6A390 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC921E28E91D7E00F6A390 /* Bundle.swift */; };
-		73CC922128E91D7E00F6A390 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC922028E91D7E00F6A390 /* Activity.swift */; };
 		73CC922628E91D8000F6A390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CC922528E91D8000F6A390 /* Assets.xcassets */; };
 		73CC922828E91D8000F6A390 /* DyeEyeWyg.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 73CC922428E91D7F00F6A390 /* DyeEyeWyg.intentdefinition */; };
 		73CC922928E91D8000F6A390 /* DyeEyeWyg.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 73CC922428E91D7F00F6A390 /* DyeEyeWyg.intentdefinition */; };
@@ -54,7 +53,6 @@
 		73CC921928E91D7E00F6A390 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		73CC921B28E91D7E00F6A390 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		73CC921E28E91D7E00F6A390 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
-		73CC922028E91D7E00F6A390 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		73CC922428E91D7F00F6A390 /* DyeEyeWyg.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DyeEyeWyg.intentdefinition; sourceTree = "<group>"; };
 		73CC922528E91D8000F6A390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73CC922728E91D8000F6A390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				73CC921E28E91D7E00F6A390 /* Bundle.swift */,
-				73CC922028E91D7E00F6A390 /* Activity.swift */,
 				73CC922428E91D7F00F6A390 /* DyeEyeWyg.intentdefinition */,
 				73CC922528E91D8000F6A390 /* Assets.xcassets */,
 				73CC922728E91D8000F6A390 /* Info.plist */,
@@ -252,7 +249,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CC921F28E91D7E00F6A390 /* Bundle.swift in Sources */,
-				73CC922128E91D7E00F6A390 /* Activity.swift in Sources */,
 				73CC922828E91D8000F6A390 /* DyeEyeWyg.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

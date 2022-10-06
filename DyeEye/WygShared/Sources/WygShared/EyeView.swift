@@ -1,5 +1,5 @@
 //
-//  Created by Jeffrey Bergier on 2022/10/05.
+//  Created by Jeffrey Bergier on 2022/10/06.
 //
 //  MIT License
 //
@@ -26,16 +26,16 @@
 
 import SwiftUI
 import WidgetKit
-import WygShared
+import ActivityKit
 
-internal struct Activity: Widget {
-    internal var body: some WidgetConfiguration {
-        ActivityConfiguration(for: Attributes.self) { context in
+public struct EyeView: Widget {
+    public init() {}
+    public var body: some WidgetConfiguration {
+        ActivityConfiguration(for: EyeAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
                 Text("Hello")
             }
-            .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)
             
         } dynamicIsland: { context in
