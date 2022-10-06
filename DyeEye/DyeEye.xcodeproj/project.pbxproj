@@ -58,6 +58,7 @@
 		73CC922728E91D8000F6A390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73CC923228E928D600F6A390 /* WygShared */ = {isa = PBXFileReference; lastKnownFileType = text; path = WygShared; sourceTree = SOURCE_ROOT; };
 		73CC923728E93D5600F6A390 /* DyeEye.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DyeEye.entitlements; sourceTree = "<group>"; };
+		73CC923828EF01C200F6A390 /* DyeEyeWygExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DyeEyeWygExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 		73CC91F828E91B8400F6A390 = {
 			isa = PBXGroup;
 			children = (
+				73CC923828EF01C200F6A390 /* DyeEyeWygExtension.entitlements */,
 				73CC920328E91B8400F6A390 /* DyeEye */,
 				73CC921D28E91D7E00F6A390 /* DyeEyeWyg */,
 				73CC923228E928D600F6A390 /* WygShared */,
@@ -449,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = DyeEyeWygExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V6ESYGU6CV;
@@ -476,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = DyeEyeWygExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V6ESYGU6CV;

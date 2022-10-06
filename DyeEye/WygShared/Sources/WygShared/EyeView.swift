@@ -29,33 +29,39 @@ import WidgetKit
 import ActivityKit
 
 public struct EyeView: Widget {
+    
+    @Storage private var counter
+    @Seconds private var seconds
+    
     public init() {}
+    
     public var body: some WidgetConfiguration {
         ActivityConfiguration(for: EyeAttributes.self) { context in
             // Lock screen/banner UI goes here
-            VStack {
-                Text("Hello")
+            HStack {
+                Spacer()
+                Text(String(self.seconds))
+                Text("|")
+                Text(String(self.counter.count))
+                Spacer()
             }
             .activitySystemActionForegroundColor(Color.black)
             
         } dynamicIsland: { context in
             DynamicIsland {
-                // Expanded UI goes here.  Compose the expanded UI through
-                // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    Text(String(self.seconds))
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+                    Text(String(self.counter.count))
                 }
                 DynamicIslandExpandedRegion(.bottom) {
                     Text("Bottom")
-                    // more content
                 }
             } compactLeading: {
-                Text("L")
+                Text(String(self.seconds))
             } compactTrailing: {
-                Text("T")
+                Text(String(self.counter.count))
             } minimal: {
                 Text("Min")
             }
@@ -64,3 +70,4 @@ public struct EyeView: Widget {
         }
     }
 }
+

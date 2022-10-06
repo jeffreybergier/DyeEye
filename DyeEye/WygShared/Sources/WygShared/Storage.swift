@@ -58,3 +58,33 @@ extension Storage {
         internal var count: Int = 0
     }
 }
+
+@propertyWrapper
+internal struct Seconds: DynamicProperty {
+    
+    @StateObject private var ticker = SecondsTicker()
+    
+    internal var wrappedValue: Int {
+        self.ticker.seconds
+    }
+    
+    internal class SecondsTicker: ObservableObject {
+        @Published internal var seconds: Int
+        private var timer: Timer?
+        internal init() {
+            self.seconds = Calendar.current.component(.second, from: Date())
+            self.timer = Timer.scheduledTimer(timeInterval: 1,
+                                              target: self,
+                                              selector: #selector(self.timerFired(_:)),
+                                              userInfo: nil,
+                                              repeats: true)
+        }
+        @objc internal func timerFired(_ timer: Timer?) {
+            
+        }
+        deinit {
+            self.timer?.invalidate()
+            self.timer = nil
+        }
+    }
+}
