@@ -28,11 +28,38 @@ import SwiftUI
 
 public struct AppView: View {
     
-    @Storage private var value
+    @EyeActivity private var activity
+    
+    @Storage private var state
+    @Seconds private var seconds
     
     public init() {}
     
     public var body: some View {
-        Stepper(String(self.value.count), value: self.$value.count)
+        VStack() {
+            StateStepper()
+            StateStepper()
+            Spacer()
+        }
+        .onAppear() {
+            try! _activity.start(self.state)
+        }
+        .onChange(of: self.state) { newValue in
+            try! _activity.update(newValue)
+        }
+        .onChange(of: self.seconds) {
+            self.state.wallSeconds = $0
+        }
     }
 }
+
+internal struct StateStepper: View {
+    @Storage private var state
+    internal init() {}
+    internal var body: some View {
+        Stepper(String(self.state.count), value: self.$state.count)
+    }
+}
+
+
+

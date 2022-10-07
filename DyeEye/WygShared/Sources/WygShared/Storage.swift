@@ -30,8 +30,11 @@ import Umbrella
 @propertyWrapper
 internal struct Storage: DynamicProperty {
     
+    
     static private let parentDir: URL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.saturdayapps.DyeEye")!
     static private let plistURL: URL = Storage.parentDir.appending(component: "datastore.plist")
+    
+    internal typealias Value = EyeAttributes.ContentState
     
     @JSBCodableFileStorage<Value>(url: Storage.plistURL,
                                   onError: { NSLog(String(describing: $0)) })
@@ -50,12 +53,6 @@ internal struct Storage: DynamicProperty {
         } set: {
             self.wrappedValue = $0
         }
-    }
-}
-
-extension Storage {
-    internal struct Value: Codable {
-        internal var count: Int = 0
     }
 }
 
@@ -80,7 +77,7 @@ internal struct Seconds: DynamicProperty {
                                               repeats: true)
         }
         @objc internal func timerFired(_ timer: Timer?) {
-            
+            self.seconds = Calendar.current.component(.second, from: Date())
         }
         deinit {
             self.timer?.invalidate()

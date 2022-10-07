@@ -31,24 +31,24 @@ import ActivityKit
 public struct EyeActivity: DynamicProperty {
     
     @State private var activity: Activity<EyeAttributes>?
-    @State private var error: Error?
-    
-    public init() {
-        do {
-            _activity = .init(wrappedValue: try Activity.request(attributes: .init(), contentState: .init()))
-            _error = .init(wrappedValue: nil)
-        } catch {
-            _activity = .init(wrappedValue: nil)
-            _error = .init(wrappedValue: error)
-        }
+    public init() { }
+    public var wrappedValue: Activity<EyeAttributes>? {
+        self.activity
     }
-    
-    public var wrappedValue: Error? {
-        self.error
+    public func start(_ state: EyeAttributes.ContentState) throws {
+        self.activity = try Activity.request(attributes: .init(), contentState: state)
+    }
+    public func update(_ state: EyeAttributes.ContentState) throws {
+        guard let activity else { return }
+        Task {
+            await activity.update(using: state)
+        }
     }
 }
 
-internal struct EyeAttributes: ActivityAttributes {
-    internal struct ContentState: Codable, Hashable {
+public struct EyeAttributes: ActivityAttributes {
+    public struct ContentState: Codable, Hashable {
+        public var count: Int = 0
+        public var wallSeconds: Int = 0
     }
 }

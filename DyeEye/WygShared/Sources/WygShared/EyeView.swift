@@ -30,38 +30,31 @@ import ActivityKit
 
 public struct EyeView: Widget {
     
-    @Storage private var counter
-    @Seconds private var seconds
-    
     public init() {}
     
     public var body: some WidgetConfiguration {
         ActivityConfiguration(for: EyeAttributes.self) { context in
             // Lock screen/banner UI goes here
             HStack {
-                Spacer()
-                Text(String(self.seconds))
                 Text("|")
-                Text(String(self.counter.count))
-                Spacer()
             }
             .activitySystemActionForegroundColor(Color.black)
             
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.leading) {
-                    Text(String(self.seconds))
+                    LeadingView(wallSeconds: context.state.wallSeconds)
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text(String(self.counter.count))
+                    TrailingView(count: context.state.count)
                 }
                 DynamicIslandExpandedRegion(.bottom) {
                     Text("Bottom")
                 }
             } compactLeading: {
-                Text(String(self.seconds))
+                LeadingView(wallSeconds: context.state.wallSeconds)
             } compactTrailing: {
-                Text(String(self.counter.count))
+                TrailingView(count: context.state.count)
             } minimal: {
                 Text("Min")
             }
@@ -71,3 +64,39 @@ public struct EyeView: Widget {
     }
 }
 
+internal struct LeadingView: View {
+    private let wallSeconds: Int
+    internal init(wallSeconds: Int) {
+        self.wallSeconds = wallSeconds
+    }
+    internal var body: some View {
+        Text(String(self.wallSeconds))
+            .modifier(BackgroundCircle(.blue))
+    }
+}
+
+internal struct TrailingView: View {
+    private let count: Int
+    internal init(count: Int) {
+        self.count = count
+    }
+    internal var body: some View {
+        Text(String(self.count))
+            .modifier(BackgroundCircle(.green))
+    }
+}
+
+internal struct BackgroundCircle: ViewModifier {
+    private let color: Color
+    internal init(_ color: Color) {
+        self.color = color
+    }
+    internal func body(content: Content) -> some View {
+        ZStack {
+            Circle()
+                .foregroundColor(self.color)
+            content
+                .padding(4)
+        }
+    }
+}

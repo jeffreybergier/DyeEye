@@ -31,15 +31,9 @@ import WygShared
 @main
 internal struct DyeEyeApp: App {
     
-    @EyeActivity private var activity
-    
     internal var body: some Scene {
         WindowGroup {
-            VStack() {
-                AppView()
-                AppView()
-                Spacer()
-            }
+            AppView()
         }
     }
 }
